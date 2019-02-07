@@ -101,6 +101,8 @@ def PredictData(sc,model):
                   "             ==>預測:"+ str(predictResult)+ \
                   " 說明:"+DescDict[predictResult] +"\n"
  
+
+#評估模型的準確率
 def evaluateModel(model, validationData):
     score = model.predict(validationData.map(lambda p: p.features))
     scoreAndLabels=score.zip(validationData.map(lambda p: p.label))
@@ -108,6 +110,7 @@ def evaluateModel(model, validationData):
     AUC=metrics.areaUnderROC
     return( AUC)
 
+#訓練與評估的功能，並且計算訓練評估的時間
 def trainEvaluateModel(trainData,validationData,
                                         impurityParm, maxDepthParm, maxBinsParm):
     startTime = time()
@@ -127,7 +130,7 @@ def trainEvaluateModel(trainData,validationData,
                  " 結果AUC = " + str(AUC) 
     return (AUC,duration, impurityParm, maxDepthParm, maxBinsParm,model)
 
-
+#評估不同參數對於模型準確率的影響
 def evalParameter(trainData, validationData, evalparm,
                   impurityList, maxDepthList, maxBinsList):
     
@@ -157,7 +160,7 @@ def showchart(df,evalparm ,barData,lineData,yMin,yMax):
     ax2.plot(df[[lineData ]].values, linestyle='-', marker='o', linewidth=2.0,color='r')
     plt.show()
 
-    
+#找出最好的參數組合    
 def evalAllParameter(trainData, validationData, 
                      impurityList, maxDepthList, maxBinsList):    
     metrics = [trainEvaluateModel(trainData, validationData,  
@@ -176,6 +179,7 @@ def evalAllParameter(trainData, validationData,
     
     return bestParameter[5]
 
+#執行參數評估，並且以圖表呈現
 def  parametersEval(trainData, validationData):
 
     print("----- 評估impurity參數使用 ---------")
