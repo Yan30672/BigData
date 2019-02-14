@@ -32,16 +32,14 @@ def genderIndex(x):
         return 1
     else:
         return 0
-#將Embarked轉換為數值（empty=0, C=1, Q=2, S=3）
-def Embarked(x):
-    if x=="C":
+#將Embarked轉換為Idx數值
+def embarkedIdx(x):
+    if x[-1]=="C":
         return 1
-    elif x=="Q":
+    elif x[-1]=="Q":
         return 2
-    elif x=="S":
-        return 3
     else:
-        return 0
+        return 3
     
 def convert_float(x):
     if x =="":
@@ -51,12 +49,22 @@ def convert_float(x):
 
 #收集特徵
 def extract_features(x):
-    categoryFeatures = [genderIndex(x[3]), Embarked(x[-1])]
+    categoryFeatures = np.zeros(4)
+    categoryFeatures[0] = genderIndex(x[3])
+    if len(x[-1]) != 0:
+        categoryFeatures[embarkedIdx(x)] = 1
+    else:
+        pass
     numericalFeatures=[x[2], convert_float(x[4]), x[5], x[6], convert_float(x[8])]
     return np.concatenate((categoryFeatures, numericalFeatures))
 
 def extract_features1(x):
-    categoryFeatures = [genderIndex(x[2]), Embarked(x[-1])]
+    categoryFeatures = np.zeros(4)
+    categoryFeatures[0] = genderIndex(x[2])
+    if len(x[-1]) != 0:
+        categoryFeatures[embarkedIdx(x)] = 1
+    else:
+        pass
     numericalFeatures=[x[1], convert_float(x[3]), x[4], x[5], convert_float(x[7])]
     return np.concatenate((categoryFeatures, numericalFeatures))
     
@@ -70,7 +78,7 @@ def PrepareData(sc):
     header = rawDataWithHeader.first() 
     rawData = rawDataWithHeader.filter(lambda x:x !=header)
     lines = rawData.map(lambda x: x.split(","))
-    newline = lines.map(lambda x: x[:3]+x[5:])
+    newline = lines.map(lambda x: x[:3]+x[5:11]+[x[-1]])
     print("共計：" + str(lines.count()) + "筆")
     #----------2.建立訓練評估所需資料 RDD[LabeledPoint]-------    
     labelpointRDD = newline.map(lambda r: LabeledPoint(extract_label(r), extract_features(r)))
@@ -88,7 +96,7 @@ def PredictData(sc,model):
     header = rawDataWithHeader.first() 
     rawData = rawDataWithHeader.filter(lambda x:x !=header)
     lines = rawData.map(lambda x: x.split(","))
-    newline = lines.map(lambda x: x[:2]+x[4:])
+    newline = lines.map(lambda x: x[:2]+x[4:10]+[x[-1]])
     print("共計：" + str(newline.count()) + "筆")
     dataRDD = newline.map(lambda r:(r[0], extract_features1(r)))
     DescDict = {
