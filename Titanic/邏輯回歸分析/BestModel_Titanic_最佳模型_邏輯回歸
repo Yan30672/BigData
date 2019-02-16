@@ -1,0 +1,103 @@
+RunLogisticRegressionWithSGDBinary
+19/02/16 21:01:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+master=local[*]
+==========資料準備階段===============
+開始匯入資料...
+共計：891筆
+1.0,
+0.0,
+0.0,
+1.0,
+3,
+22.0,
+1,
+0,
+7.25,
+標準化之後
+0.73728104523,
+-0.481772097386,
+-0.307389700253,
+0.618958732142,
+0.826912816524,
+-0.592148025767,
+0.432550428042,
+-0.473407724568,
+-0.502163136516,
+將資料分為trainData:721   validationData:78   testData:92
+==========訓練評估階段===============
+/usr/local/spark/python/lib/pyspark.zip/pyspark/mllib/classification.py:313: UserWarning: Deprecated in 2.0.0. Use ml.classification.LogisticRegression or LogisticRegressionWithLBFGS.
+訓練評估：使用參數 numIterations=15 stepSize=10 miniBatchFraction=0.5 所需時間=7.08835482597 結果AUC = 0.828993666432
+-----所有參數訓練評估找出最好的參數組合---------
+訓練評估：使用參數 numIterations=3 stepSize=10 miniBatchFraction=0.5 所需時間=1.21641111374 結果AUC = 0.815622800844
+訓練評估：使用參數 numIterations=3 stepSize=10 miniBatchFraction=0.8 所需時間=0.958386898041 結果AUC = 0.83603096411
+訓練評估：使用參數 numIterations=3 stepSize=10 miniBatchFraction=1 所需時間=1.02762794495 結果AUC = 0.815622800844
+訓練評估：使用參數 numIterations=3 stepSize=50 miniBatchFraction=0.5 所需時間=1.21191978455 結果AUC = 0.709007741027
+訓練評估：使用參數 numIterations=3 stepSize=50 miniBatchFraction=0.8 所需時間=1.01300311089 結果AUC = 0.633708655876
+訓練評估：使用參數 numIterations=3 stepSize=50 miniBatchFraction=1 所需時間=0.770913124084 結果AUC = 0.636875439831
+訓練評估：使用參數 numIterations=3 stepSize=100 miniBatchFraction=0.5 所需時間=0.869010210037 結果AUC = 0.743490499648
+訓練評估：使用參數 numIterations=3 stepSize=100 miniBatchFraction=0.8 所需時間=0.769310951233 結果AUC = 0.688599577762
+訓練評估：使用參數 numIterations=3 stepSize=100 miniBatchFraction=1 所需時間=0.862267017365 結果AUC = 0.705840957072
+訓練評估：使用參數 numIterations=5 stepSize=10 miniBatchFraction=0.5 所需時間=0.843420028687 結果AUC = 0.83603096411
+訓練評估：使用參數 numIterations=5 stepSize=10 miniBatchFraction=0.8 所需時間=0.736423015594 結果AUC = 0.798381421534
+訓練評估：使用參數 numIterations=5 stepSize=10 miniBatchFraction=1 所需時間=0.708724975586 結果AUC = 0.815622800844
+訓練評估：使用參數 numIterations=5 stepSize=50 miniBatchFraction=0.5 所需時間=0.993076086044 結果AUC = 0.69563687544
+訓練評估：使用參數 numIterations=5 stepSize=50 miniBatchFraction=0.8 所需時間=0.785715103149 結果AUC = 0.685432793807
+訓練評估：使用參數 numIterations=5 stepSize=50 miniBatchFraction=1 所需時間=0.73051905632 結果AUC = 0.839197748065
+訓練評估：使用參數 numIterations=5 stepSize=100 miniBatchFraction=0.5 所需時間=0.758219003677 結果AUC = 0.589021815623
+訓練評估：使用參數 numIterations=5 stepSize=100 miniBatchFraction=0.8 所需時間=0.680943012238 結果AUC = 0.57881773399
+訓練評估：使用參數 numIterations=5 stepSize=100 miniBatchFraction=1 所需時間=0.631759881973 結果AUC = 0.599225897255
+訓練評估：使用參數 numIterations=10 stepSize=10 miniBatchFraction=0.5 所需時間=0.93413901329 結果AUC = 0.828993666432
+訓練評估：使用參數 numIterations=10 stepSize=10 miniBatchFraction=0.8 所需時間=0.816483974457 結果AUC = 0.828993666432
+訓練評估：使用參數 numIterations=10 stepSize=10 miniBatchFraction=1 所需時間=0.81689786911 結果AUC = 0.83603096411
+訓練評估：使用參數 numIterations=10 stepSize=50 miniBatchFraction=0.5 所需時間=0.75014591217 結果AUC = 0.808585503167
+訓練評估：使用參數 numIterations=10 stepSize=50 miniBatchFraction=0.8 所需時間=0.838521957397 結果AUC = 0.726249120338
+訓練評估：使用參數 numIterations=10 stepSize=50 miniBatchFraction=1 所需時間=0.840538978577 結果AUC = 0.767769176636
+訓練評估：使用參數 numIterations=10 stepSize=100 miniBatchFraction=0.5 所需時間=0.944900035858 結果AUC = 0.818789584799
+訓練評估：使用參數 numIterations=10 stepSize=100 miniBatchFraction=0.8 所需時間=0.869088888168 結果AUC = 0.698803659395
+訓練評估：使用參數 numIterations=10 stepSize=100 miniBatchFraction=1 所需時間=0.721487998962 結果AUC = 0.774102744546
+訓練評估：使用參數 numIterations=15 stepSize=10 miniBatchFraction=0.5 所需時間=0.905555963516 結果AUC = 0.828993666432
+訓練評估：使用參數 numIterations=15 stepSize=10 miniBatchFraction=0.8 所需時間=0.981912136078 結果AUC = 0.83603096411
+訓練評估：使用參數 numIterations=15 stepSize=10 miniBatchFraction=1 所需時間=0.790731191635 結果AUC = 0.83603096411
+訓練評估：使用參數 numIterations=15 stepSize=50 miniBatchFraction=0.5 所需時間=0.776101112366 結果AUC = 0.808585503167
+訓練評估：使用參數 numIterations=15 stepSize=50 miniBatchFraction=0.8 所需時間=0.742184877396 結果AUC = 0.763898662913
+訓練評估：使用參數 numIterations=15 stepSize=50 miniBatchFraction=1 所需時間=0.841687917709 結果AUC = 0.781140042224
+訓練評估：使用參數 numIterations=15 stepSize=100 miniBatchFraction=0.5 所需時間=0.899080991745 結果AUC = 0.716045038705
+訓練評估：使用參數 numIterations=15 stepSize=100 miniBatchFraction=0.8 所需時間=0.770369052887 結果AUC = 0.705840957072
+訓練評估：使用參數 numIterations=15 stepSize=100 miniBatchFraction=1 所需時間=0.93203997612 結果AUC = 0.698803659395
+調校後最佳參數：numIterations:5  ,stepSize:50  ,miniBatchFraction:1  ,結果AUC = 0.839197748065
+==========測試階段===============
+使用test Data測試最佳模型,結果 AUC:0.772681704261
+==========預測資料===============
+開始匯入資料...
+共計：418筆
+ 名單編號：  892
+             ==>預測:0 說明:死亡
+
+ 名單編號：  893
+             ==>預測:0 說明:死亡
+
+ 名單編號：  894
+             ==>預測:0 說明:死亡
+
+ 名單編號：  895
+             ==>預測:0 說明:死亡
+
+ 名單編號：  896
+             ==>預測:0 說明:死亡
+
+ 名單編號：  897
+             ==>預測:0 說明:死亡
+
+ 名單編號：  898
+             ==>預測:0 說明:死亡
+
+ 名單編號：  899
+             ==>預測:0 說明:死亡
+
+ 名單編號：  900
+             ==>預測:0 說明:死亡
+
+ 名單編號：  901
+             ==>預測:0 說明:死亡
+
+
