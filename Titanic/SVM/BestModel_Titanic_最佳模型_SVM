@@ -1,0 +1,126 @@
+RunSVMWithSGDBinary
+19/02/16 22:05:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+master=local[*]
+==========資料準備階段===============
+開始匯入資料...
+共計：891筆
+1.0,
+0.0,
+0.0,
+1.0,
+3,
+22.0,
+1,
+0,
+7.25,
+標準化之後
+0.73728104523,
+-0.481772097386,
+-0.307389700253,
+0.618958732142,
+0.826912816524,
+-0.592148025767,
+0.432550428042,
+-0.473407724568,
+-0.502163136516,
+將資料分為trainData:707   validationData:94   testData:90
+==========訓練評估階段===============
+訓練評估：使用參數 numIterations=3 stepSize=50 regParam=1 所需時間=6.20764112473 結果AUC = 0.723278985507
+-----所有參數訓練評估找出最好的參數組合---------
+訓練評估：使用參數 numIterations=1 stepSize=10 regParam=0.01 所需時間=1.32734513283 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=10 regParam=0.1 所需時間=1.22688698769 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=10 regParam=1 所需時間=0.950148820877 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=50 regParam=0.01 所需時間=0.698398828506 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=50 regParam=0.1 所需時間=0.83575797081 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=50 regParam=1 所需時間=1.23416113853 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=100 regParam=0.01 所需時間=1.0960290432 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=100 regParam=0.1 所需時間=0.698230028152 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=100 regParam=1 所需時間=0.802088975906 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=200 regParam=0.01 所需時間=0.758296012878 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=200 regParam=0.1 所需時間=0.700926065445 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=1 stepSize=200 regParam=1 所需時間=0.672029018402 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=10 regParam=0.01 所需時間=0.75088095665 結果AUC = 0.745018115942
+訓練評估：使用參數 numIterations=3 stepSize=10 regParam=0.1 所需時間=0.708149194717 結果AUC = 0.701086956522
+訓練評估：使用參數 numIterations=3 stepSize=10 regParam=1 所需時間=0.702543973923 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=50 regParam=0.01 所需時間=0.65230512619 結果AUC = 0.745471014493
+訓練評估：使用參數 numIterations=3 stepSize=50 regParam=0.1 所需時間=0.67169713974 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=50 regParam=1 所需時間=0.746876001358 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=100 regParam=0.01 所需時間=0.775161981583 結果AUC = 0.564311594203
+訓練評估：使用參數 numIterations=3 stepSize=100 regParam=0.1 所需時間=0.668057203293 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=100 regParam=1 所需時間=0.623553037643 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=200 regParam=0.01 所需時間=0.632631063461 結果AUC = 0.701539855072
+訓練評估：使用參數 numIterations=3 stepSize=200 regParam=0.1 所需時間=0.630391120911 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=3 stepSize=200 regParam=1 所需時間=0.572094917297 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=10 regParam=0.01 所需時間=0.693751096725 結果AUC = 0.745923913043
+訓練評估：使用參數 numIterations=5 stepSize=10 regParam=0.1 所需時間=0.726876974106 結果AUC = 0.636322463768
+訓練評估：使用參數 numIterations=5 stepSize=10 regParam=1 所需時間=0.71982216835 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=50 regParam=0.01 所需時間=0.662572860718 結果AUC = 0.668025362319
+訓練評估：使用參數 numIterations=5 stepSize=50 regParam=0.1 所需時間=0.661831855774 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=50 regParam=1 所需時間=0.672382831573 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=100 regParam=0.01 所需時間=0.635236024857 結果AUC = 0.595108695652
+訓練評估：使用參數 numIterations=5 stepSize=100 regParam=0.1 所需時間=0.636770009995 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=100 regParam=1 所需時間=0.672846078873 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=200 regParam=0.01 所需時間=0.633193969727 結果AUC = 0.66893115942
+訓練評估：使用參數 numIterations=5 stepSize=200 regParam=0.1 所需時間=0.671680927277 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=5 stepSize=200 regParam=1 所需時間=0.641921043396 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=10 regParam=0.01 所需時間=0.912407159805 結果AUC = 0.735054347826
+訓練評估：使用參數 numIterations=15 stepSize=10 regParam=0.1 所需時間=0.803942918777 結果AUC = 0.670742753623
+訓練評估：使用參數 numIterations=15 stepSize=10 regParam=1 所需時間=0.963460922241 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=50 regParam=0.01 所需時間=0.866930961609 結果AUC = 0.745923913043
+訓練評估：使用參數 numIterations=15 stepSize=50 regParam=0.1 所需時間=0.782517910004 結果AUC = 0.679347826087
+訓練評估：使用參數 numIterations=15 stepSize=50 regParam=1 所需時間=0.804640054703 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=100 regParam=0.01 所需時間=0.732482910156 結果AUC = 0.724637681159
+訓練評估：使用參數 numIterations=15 stepSize=100 regParam=0.1 所需時間=0.777189016342 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=100 regParam=1 所需時間=0.757675170898 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=200 regParam=0.01 所需時間=0.768834114075 結果AUC = 0.658061594203
+訓練評估：使用參數 numIterations=15 stepSize=200 regParam=0.1 所需時間=0.834304094315 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=15 stepSize=200 regParam=1 所需時間=0.836782217026 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=10 regParam=0.01 所需時間=1.21526789665 結果AUC = 0.724637681159
+訓練評估：使用參數 numIterations=25 stepSize=10 regParam=0.1 所需時間=0.962756872177 結果AUC = 0.714221014493
+訓練評估：使用參數 numIterations=25 stepSize=10 regParam=1 所需時間=0.916617155075 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=50 regParam=0.01 所需時間=0.953742980957 結果AUC = 0.745923913043
+訓練評估：使用參數 numIterations=25 stepSize=50 regParam=0.1 所需時間=0.925752162933 結果AUC = 0.648097826087
+訓練評估：使用參數 numIterations=25 stepSize=50 regParam=1 所需時間=0.903466939926 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=0.01 所需時間=1.29080414772 結果AUC = 0.75634057971
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=0.1 所需時間=1.21642494202 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=1 所需時間=0.937146902084 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=200 regParam=0.01 所需時間=1.1167049408 結果AUC = 0.659873188406
+訓練評估：使用參數 numIterations=25 stepSize=200 regParam=0.1 所需時間=0.89786195755 結果AUC = 0.723278985507
+訓練評估：使用參數 numIterations=25 stepSize=200 regParam=1 所需時間=0.902861118317 結果AUC = 0.723278985507
+調校後最佳參數：numIterations:25  ,stepSize:100  ,regParam:0.01  ,結果AUC = 0.75634057971
+==========測試階段===============
+使用test Data測試最佳模型,結果 AUC:0.762931034483
+==========預測資料===============
+開始匯入資料...
+共計：418筆
+ 名單編號：  892
+             ==>預測:0 說明:死亡
+
+ 名單編號：  893
+             ==>預測:0 說明:死亡
+
+ 名單編號：  894
+             ==>預測:0 說明:死亡
+
+ 名單編號：  895
+             ==>預測:0 說明:死亡
+
+ 名單編號：  896
+             ==>預測:0 說明:死亡
+
+ 名單編號：  897
+             ==>預測:0 說明:死亡
+
+ 名單編號：  898
+             ==>預測:0 說明:死亡
+
+ 名單編號：  899
+             ==>預測:0 說明:死亡
+
+ 名單編號：  900
+             ==>預測:0 說明:死亡
+
+ 名單編號：  901
+             ==>預測:0 說明:死亡
+
+

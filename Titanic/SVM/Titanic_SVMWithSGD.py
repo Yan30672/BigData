@@ -181,7 +181,7 @@ def evalParameter(trainData, validationData, evalparm,
     
     df = pd.DataFrame(metrics,index=IndexList,
             columns=['AUC', 'duration','numIterations', 'stepSize', 'regParam','model'])
-    showchart(df,evalparm,'AUC','duration',0.5,0.7 )
+    showchart(df,evalparm,'AUC','duration',0.5,0.8 )
     
 def showchart(df,evalparm ,barData,lineData,yMin,yMax):
     ax = df[barData].plot(kind='bar', title =evalparm,figsize=(10,6),legend=True, fontsize=12)

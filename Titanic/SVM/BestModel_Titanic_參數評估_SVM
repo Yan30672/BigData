@@ -1,0 +1,79 @@
+RunSVMWithSGDBinary
+19/02/16 22:03:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+master=local[*]
+==========資料準備階段===============
+開始匯入資料...
+共計：891筆
+1.0,
+0.0,
+0.0,
+1.0,
+3,
+22.0,
+1,
+0,
+7.25,
+標準化之後
+0.73728104523,
+-0.481772097386,
+-0.307389700253,
+0.618958732142,
+0.826912816524,
+-0.592148025767,
+0.432550428042,
+-0.473407724568,
+-0.502163136516,
+將資料分為trainData:719   validationData:101   testData:71
+==========訓練評估階段===============
+訓練評估：使用參數 numIterations=3 stepSize=50 regParam=1 所需時間=6.26082992554 結果AUC = 0.735245901639
+----- 評估numIterations參數使用 ---------
+訓練評估：使用參數 numIterations=1 stepSize=100 regParam=1 所需時間=1.15384602547 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=3 stepSize=100 regParam=1 所需時間=1.30625605583 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=5 stepSize=100 regParam=1 所需時間=1.02337098122 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=15 stepSize=100 regParam=1 所需時間=1.59727597237 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=1 所需時間=1.71108984947 結果AUC = 0.735245901639
+----- 評估stepSize參數使用 ---------
+訓練評估：使用參數 numIterations=25 stepSize=10 regParam=1 所需時間=1.90808701515 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=25 stepSize=50 regParam=1 所需時間=1.51381206512 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=1 所需時間=1.29242300987 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=25 stepSize=200 regParam=1 所需時間=1.34627509117 結果AUC = 0.735245901639
+----- 評估regParam參數使用 ---------
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=0.01 所需時間=1.50681209564 結果AUC = 0.718852459016
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=0.1 所需時間=1.17992591858 結果AUC = 0.735245901639
+訓練評估：使用參數 numIterations=25 stepSize=100 regParam=1 所需時間=1.45512986183 結果AUC = 0.735245901639
+==========測試階段===============
+使用test Data測試最佳模型,結果 AUC:0.658653846154
+==========預測資料===============
+開始匯入資料...
+共計：418筆
+ 名單編號：  892
+             ==>預測:0 說明:死亡
+
+ 名單編號：  893
+             ==>預測:0 說明:死亡
+
+ 名單編號：  894
+             ==>預測:0 說明:死亡
+
+ 名單編號：  895
+             ==>預測:0 說明:死亡
+
+ 名單編號：  896
+             ==>預測:1 說明:倖存
+
+ 名單編號：  897
+             ==>預測:0 說明:死亡
+
+ 名單編號：  898
+             ==>預測:0 說明:死亡
+
+ 名單編號：  899
+             ==>預測:1 說明:倖存
+
+ 名單編號：  900
+             ==>預測:1 說明:倖存
+
+ 名單編號：  901
+             ==>預測:1 說明:倖存
+
+
